@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Online Attendance Management System</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        /* Default Light Mode Styles */
+        body.light-mode {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .navbar-light {
+            background-color: #f8f9fa;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #9370DB;
+        }
+
+        /* Styles for Dark Mode */
+        body.dark-mode {
+            background-color: #111010dc;
+            color: #ffffff;
+        }
+
+        .navbar-dark {
+            background-color: #111010dc;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #e0e0e0;
+        }
+
+        /* Adjusted spacing between navbar items */
+        .nav-item {
+            margin-right: 20px;
+        }
+
+        /* Landing Page with Background Image */
+        .landing-page {
+            background-size: cover;
+            background-position: center;
+            min-height: 85vh;
+        }
+
+        /* Footer styles */
+        .footer {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        body.dark-mode .footer {
+            background-color: #000000;
+        }
+
+        .footer a {
+            color: #9370DB;
+        }
+
+        body.dark-mode .footer a {
+            color: #d0d0d0;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    {% load static %}
+    <link rel="icon" type="image/jpg" href="{% static 'logo.jpg' %}">
+</head>
+
+<body class="light-mode">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">
+            {% load static %}
+            <img src="{% static 'logo.jpg' %}" alt="Logo" height="30">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/signup">SignUp</a>
+                </li>
+                <!-- Dark/Light Mode Switch -->
+                <li class="nav-item">
+                    <button id="toggle-mode" class="btn btn-sm">
+                        {% load static %}
+                        <img id="mode-icon" src="{% static 'sun.png' %}" alt="Toggle Mode" height="20">
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Page Content -->
+    <div class="landing-page">
+        <div class="container" style="min-height: 70vh; padding-top: 50px;">
+            <h1>About Our Online Attendance Management System</h1>
+
+            <h2>Introduction</h2>
+            <p>
+                Welcome to my Online Attendance Management System! I'm Amulya Kumar Padhan, a computer science student
+                specializing in artificial intelligence and web development. This project is a demonstration of my
+                skills
+                and expertise in building web-based applications that incorporate advanced technologies like computer
+                vision and face recognition.
+            </p>
+
+            <h2>Project Overview</h2>
+            <p>
+                The Online Attendance Management System is designed to automate and streamline the process of marking
+                attendance using face recognition technology. It combines traditional web development with cutting-edge
+                machine learning to create a solution that is both efficient and user-friendly.
+            </p>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li>Web-Based Platform: This system is accessible through a simple web interface, allowing users to mark
+                    attendance online.</li>
+                <li>Face Recognition: I used OpenCV and DeepFace to implement face detection and recognition, providing
+                    an automated way to mark attendance.</li>
+                <li>Secure and Efficient: The system ensures secure handling of user data while providing quick and
+                    accurate
+                    attendance recording.</li>
+            </ul>
+
+            <h2>Technologies Used</h2>
+            <ul>
+                <li>Django: This powerful web framework allowed me to build a robust backend for the system.</li>
+                <li>OpenCV: A versatile computer vision library used for face detection and image processing.</li>
+                <li>DeepFace: A popular face recognition library that leverages deep learning to identify and verify
+                    faces.</li>
+                <li>JavaScript: Used for client-side interactions, including capturing webcam images for face
+                    recognition.</li>
+                <li>Bootstrap: A frontend framework to create a responsive and modern user interface.</li>
+            </ul>
+
+            <h2>About Me</h2>
+            <p>
+                I'm a computer science student with a passion for AI and web development. This project represents my
+                journey
+                in learning and applying advanced technologies to solve real-world problems. My goal is to create
+                innovative
+                solutions that can make everyday tasks easier and more efficient.
+            </p>
+
+            <h2>Why I Built This Project</h2>
+            <p>
+                As a student, I wanted to showcase my skills and demonstrate my ability to create a full-stack project
+                that
+                integrates complex technologies. This project allowed me to explore areas like computer vision and
+                machine
+                learning while building a useful application.
+            </p>
+
+            <h2>Contact Me</h2>
+            <p>
+                If you have any questions about this project or would like to learn more about my work, feel free to
+                reach out.
+                I'm always interested in connecting with like-minded individuals and discussing technology.
+            </p>
+            <ul>
+                <li>Email: <a href="mailto:amulyakumarpadhan7@gmail.com">amulyakumarpadhan7@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/amulya-kumar-padhan/">https://www.linkedin.com/in/amulya-kumar-padhan/</a></li>
+                <!-- <li>GitHub: <a href="https://github.com/your-github-username">Your GitHub Profile</a></li> -->
+
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center"> <!-- Centered footer content -->
+        <div class="container">
+            <p>&copy; 2024 Online Attendance Management System. All rights reserved.</p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <!-- <script src="toggle-mode.js"></script> -->
+    <script>
+        // toggle-mode.js
+        const moonPath = "{% static 'moon.png' %}";  // Correct path for moon icon
+        const sunPath = "{% static 'sun.png' %}";   // Correct path for sun icon
+        const toggleModeButton = document.getElementById("toggle-mode");
+        const modeIcon = document.getElementById("mode-icon");
+
+        toggleModeButton.addEventListener("click", function () {
+            const body = document.body;
+            const navbar = document.querySelector("nav.navbar");
+
+            if (body.classList.contains("light-mode")) {
+                body.classList.remove("light-mode");
+                body.classList.add("dark-mode");
+                navbar.classList.remove("navbar-light");
+                navbar.classList.add("navbar-dark");
+
+                modeIcon.src = moonPath;  // Change to moon icon for dark mode
+            } else {
+                body.classList.remove("dark-mode");
+                body.classList.add("light-mode");
+                navbar.classList.remove("navbar-dark");
+                navbar.classList.add("navbar-light");
+
+                modeIcon.src = sunPath;  // Change to sun icon for light mode
+            }
+
+            // Save the mode in local storage
+            localStorage.setItem("theme", body.classList.contains("light-mode") ? "light-mode" : "dark-mode");
+        });
+
+        window.onload = function () {
+            const theme = localStorage.getItem("theme");
+            const navbar = document.querySelector("nav.navbar");
+            const modeIcon = document.getElementById("mode-icon");
+
+            if (theme) {
+                document.body.classList.remove("light-mode", "dark-mode");
+                document.body.classList.add(theme);
+
+                if (theme === "light-mode") {
+                    navbar.classList.remove("navbar-dark");
+                    navbar.classList.add("navbar-light");
+                    modeIcon.src = sunPath;  // Default to sun for light mode<a href="https://www.flaticon.com/free-icons/sun" title="sun icons">Sun icons created by Freepik - Flaticon</a>
+                } else {
+                    navbar.classList.remove("navbar-light");
+                    navbar.classList.add("navbar-dark");
+                    modeIcon.src = moonPath;  // Default to moon for dark mode <a href="https://www.flaticon.com/free-icons/moon" title="moon icons">Moon icons created by Freepik - Flaticon</a>
+                }
+            }
+        };
+
+    </script>
+</body>
